@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #2742dc;
+    color: #ffffffe2;
+}
+
+p, footer h4{
+    color: rgba(255, 255, 255, 0.61);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+}
+
+.nav-container{
+    display: inline-block;
+}
+
+/* Main */
+main{
+    display: grid;
+    grid-template-columns: 45% 55%;
+    border: 1px solid rgba(255, 255, 255, 0.854);
+}
+
+.main-left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 63px;
+}
+
+.main-left h1{
+    font-weight: 400;
+    font-size: 46px;
+    margin: 64px 0 6px 0;
+}
+
+.main-left p{
+    max-width: 500px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.main-right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.boxes{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 16px 23px;
+    border-top: 1px solid rgba(255, 255, 255, 0.886);
+    border-left:1px solid rgba(255, 255, 255, 0.838) ;
+}
+
+.top-part{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+}
+
+.bottom-part h4{
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.bottom-part p{
+    font-size: 11px;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+
+
+/* Mobile */
+
+@media (max-width : 768px ){
+
+    main{
+        grid-template-columns: 1fr;
+    }
+
+    .main-left {
+        min-height: 400px;
+        padding: 30px;
+    }
+
+    .main-left h1 {
+        font-size: 58px;
+        margin-top: 0px;
+    }
+
+    .main-left p{
+        font-size: 20px;
+    }
+
+    .main-right {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .boxes {
+        min-height: 250px;
+    }
+
+    .bottom-part h4, .bottom-part p {
+        font-size: 20px;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: start;
+        /* padding: 10px; */
+    }
+
+    footer h4{
+        padding-top: 10px;
+    }
+
+
+}
